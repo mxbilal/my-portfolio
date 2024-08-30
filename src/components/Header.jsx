@@ -65,7 +65,7 @@ const Header = () => {
             </ol>
             <ButtonLink
               content="Resume"
-              url="https://drive.google.com/file/d/1RaAca8BRGBQnPvWjz3kQ919yTNYMSD1o/view"
+              url="https://drive.google.com/file/d/1BDnNHUCa43vRGnAVvhNCv4DZsqqDYFDa/view"
               classNameBox="ml-[15px]"
             />
           </div>
@@ -123,7 +123,7 @@ const Header = () => {
           </ol>
           <ButtonLink
             content="Resume"
-            url="https://drive.google.com/file/d/1RaAca8BRGBQnPvWjz3kQ919yTNYMSD1o/view"
+            url="https://drive.google.com/file/d/1BDnNHUCa43vRGnAVvhNCv4DZsqqDYFDa/view"
             classNameBox="mt-[15px]"
           />
         </nav>
