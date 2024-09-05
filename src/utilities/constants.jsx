@@ -3,7 +3,7 @@ import { RiSwordLine } from "react-icons/ri";
 import { SiGeeksforgeeks, SiCodewars } from "react-icons/si";
 import lyca from "../assets/engagement.png";
 import plexaar from "../assets/plex.jpg";
-import eventImg from "../assets/event.png";
+import traddoo from "../assets/traddoo.png";
 
 export const navLinks = [
   {
@@ -74,13 +74,13 @@ export const mainProjects = [
     image: plexaar,
   },
   {
-    title: "Event Organizer",
+    title: "Traddoo Trading App",
     description:
-      "This is a event Organizer Website, where users watch live and recorded videos events, also it have live questions and answers and live polls",
+      "Traddoo is a prop trading firm offering real capital for traders, allowing them to grow their trading edge with transparent funding programs. Traders can benefit from tight spreads, multi-platform trading, and the ability to use custom EAs.",
     tags: ["React", "Mui", "API", "SCSS", "Live poll and events"],
-    github: "",
-    demo: "",
-    image: eventImg,
+    github: "https://github.com/mxbilal/Trado_User_UI",
+    demo: "https://trado-user-ui.vercel.app/",
+    image: traddoo,
   },
 ];
 
