@@ -2,7 +2,7 @@ import { LuLinkedin, LuGithub } from "react-icons/lu";
 import { SiGeeksforgeeks, SiCodewars } from "react-icons/si";
 import lyca from "../assets/engagement.png";
 import plexaar from "../assets/plex.jpg";
-import traddoo from "../assets/traddoo.png";
+import traddooImg from "../assets/traddoo.png";
 
 export const navLinks = [
   {
@@ -79,7 +79,7 @@ export const mainProjects = [
     tags: ["React", "Mui", "API", "SCSS", "Live poll and events"],
     github: "https://github.com/mxbilal/Trado_User_UI",
     demo: "https://trado-user-ui.vercel.app/",
-    image: traddoo,
+    image: traddooImg,
   },
 ];
 
