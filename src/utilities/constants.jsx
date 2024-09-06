@@ -2,7 +2,7 @@ import { LuLinkedin, LuGithub } from "react-icons/lu";
 import { SiGeeksforgeeks, SiCodewars } from "react-icons/si";
 import lyca from "../assets/engagement.png";
 import plexaar from "../assets/plex.jpg";
-import traddooImg from "../assets/plex.jpg";
+import traddooImg from "../assets/trado.png";
 
 export const navLinks = [
   {
