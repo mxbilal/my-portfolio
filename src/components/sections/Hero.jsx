@@ -1,4 +1,4 @@
-import Profile from "../../assets/profile-pic.png";
+import Profile from "../../assets/pic.jpg";
 import ButtonLink from "../shared/ButtonLink";
 import { motion } from "framer-motion";
 
@@ -44,8 +44,8 @@ const Hero = () => {
             viewport={{ once: true }}
             className="text-center lg:text-left m-0 mt-[20px] text-secondaryText font-fontParagraph"
           >
-            I'm a passionate front-end developer specialized in building
-            exceptional web apps from Islamabad, Pakistan 📍
+            I'm a passionate front-end developer specialized in building exceptional web apps from
+            Islamabad, Pakistan 📍
           </motion.p>
           <ButtonLink
             content="Get In Touch!"
