@@ -36,20 +36,8 @@ const About = () => {
         </div>
         <div className="text-secondaryText font-fontParagraph text-base md:text-justify w-full md:max-w-[350px] lg:max-w-[500px]">
           <p className="mb-3">
-            A full stack developer and founder of{" "}
-            {/* Live site ready — uncomment when you want it linked:
-            <a
-              href="https://bytebridges.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-themeBlue hover:underline underline-offset-2"
-            >
-              ByteBridges
-            </a>
-            */}
-            <span className="text-themeBlue">ByteBridges</span> — a small
-            Islamabad team shipping CRMs, CMS tools, and SaaS for startups.
-            Comfortable across{" "}
+            A full stack developer with 5+ years building CRMs, audit tools, and
+            SaaS products. Comfortable across{" "}
             <span className="text-themeBlue">React</span>,{" "}
             <span className="text-themeBlue">Next.js</span>,{" "}
             <span className="text-themeBlue">NestJS</span>,{" "}

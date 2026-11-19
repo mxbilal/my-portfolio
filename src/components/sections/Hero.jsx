@@ -42,26 +42,6 @@ const Hero = () => {
           </motion.h3>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
-            transition={{ delay: 0.45, duration: 0.5 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center lg:text-left m-0 mt-[8px] text-themeBlue font-mono text-sm tracking-wide"
-          >
-            Founder of{" "}
-            {/* Live site ready — uncomment when you want it linked:
-            <a
-              href="https://bytebridges.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-4 hover:text-primaryText transition-colors"
-            >
-              ByteBridges
-            </a>
-            */}
-            <span className="underline underline-offset-4">ByteBridges</span>
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
             transition={{ delay: 0.5, duration: 0.5 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

@@ -33,20 +33,13 @@ const MainProjectCard = ({
           Featured Project
         </p>
 
-        <h3 className="font-bold leading-[1.1] text-sectionHeading font-fontHeading md:mb-[20px]">
+        <h3 className="text-primaryText font-bold leading-[1.1] text-sectionHeading transition-all duration-200 hover:text-themeBlue font-fontHeading md:mb-[20px]">
           {hasDemo ? (
-            <a
-              href={demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-accentOrange text-accentInk px-[0.28em] py-[0.05em] rounded-[3px] transition-all duration-200 hover:brightness-110"
-            >
+            <a href={demo} target="_blank" rel="noopener noreferrer">
               {title}
             </a>
           ) : (
-            <span className="inline-block bg-accentOrange text-accentInk px-[0.28em] py-[0.05em] rounded-[3px]">
-              {title}
-            </span>
+            title
           )}
         </h3>
 

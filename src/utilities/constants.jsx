@@ -58,9 +58,6 @@ export const social_links = [
   },
 ];
 
-/** Uncomment when ready to link the live site */
-// export const bytebridgesUrl = "https://bytebridges.vercel.app";
-
 export const experience = [
   {
     company: "Irtiqa Business Solutions",
