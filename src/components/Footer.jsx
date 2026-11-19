@@ -21,16 +21,6 @@ const Footer = () => {
             ))}
         </ul>
       </div>
-      <div className="text-secondaryText font-mono text-sm leading-4">
-        <a
-          href="https://github.com/mxbilal"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="p-[10px] hover:text-themeBlue transition-all duration-200"
-        >
-          <div>Designed by Brittany Chiang & Built by Muhammad Bilal</div>
-        </a>
-      </div>
     </footer>
   );
 };

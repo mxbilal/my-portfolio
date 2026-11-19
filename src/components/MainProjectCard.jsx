@@ -6,6 +6,9 @@ const MainProjectCard = ({
   idx,
   length,
 }) => {
+  const hasDemo = Boolean(demo);
+  const hasGithub = Boolean(github);
+
   return (
     <motion.li
       initial={{ opacity: 0, y: 25 }}
@@ -31,9 +34,13 @@ const MainProjectCard = ({
         </p>
 
         <h3 className="text-primaryText font-bold leading-[1.1] text-sectionHeading transition-all duration-200 hover:text-themeBlue font-fontHeading md:mb-[20px]">
-          <a href={demo} target="_blank" rel="noopener noreferrer">
-            {title}
-          </a>
+          {hasDemo ? (
+            <a href={demo} target="_blank" rel="noopener noreferrer">
+              {title}
+            </a>
+          ) : (
+            title
+          )}
         </h3>
 
         <div className="shadow-none md:shadow-aboutShadow transition-all duration-200 relative z-[2] py-[20px] md:p-[25px] rounded text-secondaryText text-base bg-transparent md:bg-[#112240] font-fontParagraph md:hover:shadow-bigShadow">
@@ -55,28 +62,36 @@ const MainProjectCard = ({
           ))}
         </ul>
 
-        <div
-          className={`flex items-center relative mt-[10px] ml-[10px] ${
-            idx % 2 === 0 && "md:justify-end md:ml-0 md:mr-[10px]"
-          } text-primaryText text-[22px]`}
-        >
-          <a
-            href={github}
-            className="flex justify-center items-center p-[10px] transition-all duration-200 hover:text-themeBlue"
-            target="_blank"
-            rel="noopener noreferrer"
+        {(hasGithub || hasDemo) && (
+          <div
+            className={`flex items-center relative mt-[10px] ml-[10px] ${
+              idx % 2 === 0 && "md:justify-end md:ml-0 md:mr-[10px]"
+            } text-primaryText text-[22px]`}
           >
-            <FiGithub />
-          </a>
-          <a
-            href={demo}
-            className="flex justify-center items-center p-[10px] transition-all duration-200 hover:text-themeBlue"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FiExternalLink />
-          </a>
-        </div>
+            {hasGithub && (
+              <a
+                href={github}
+                className="flex justify-center items-center p-[10px] transition-all duration-200 hover:text-themeBlue"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${title} GitHub`}
+              >
+                <FiGithub />
+              </a>
+            )}
+            {hasDemo && (
+              <a
+                href={demo}
+                className="flex justify-center items-center p-[10px] transition-all duration-200 hover:text-themeBlue"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${title} live site`}
+              >
+                <FiExternalLink />
+              </a>
+            )}
+          </div>
+        )}
       </div>
 
       <div
@@ -89,24 +104,43 @@ const MainProjectCard = ({
           gridArea: "1 / 6 / -1 / -1",
         }}
       >
-        <a
-          href={demo}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="h-full"
-        >
-          <div className="group w-full relative max-w-[700px] h-full">
-            <div className="block relative w-full bg-themeBlue shadow-aboutShadow  rounded-lg transition-all duration-500 mix-blend-screen group-hover:mix-blend-normal h-full z-[3]">
-              <img
-                className="w-auto md:w-full h-full min-h-[400px] bg-no-repeat rounded-lg relative object-cover transition-all duration-500 mix-blend-multiply grayscale contrast-[70%] brightness-50 md:brightness-95   group-hover:mix-blend-normal group-hover:filter-none opacity-85 md:opacity-100 z-[4]"
-                src={image}
-              />
-            </div>
+        {hasDemo ? (
+          <a
+            href={demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="h-full block"
+          >
+            <ProjectThumb title={title} image={image} />
+          </a>
+        ) : (
+          <div className="h-full">
+            <ProjectThumb title={title} image={image} />
           </div>
-        </a>
+        )}
       </div>
     </motion.li>
   );
 };
+
+const ProjectThumb = ({ title, image }) => (
+  <div className="group w-full relative max-w-[700px] h-full">
+    <div className="block relative w-full bg-themeBlue shadow-aboutShadow rounded-lg transition-all duration-500 mix-blend-screen group-hover:mix-blend-normal h-full z-[3]">
+      {image ? (
+        <img
+          className="w-auto md:w-full h-full min-h-[400px] bg-no-repeat rounded-lg relative object-cover transition-all duration-500 mix-blend-multiply grayscale contrast-[70%] brightness-50 md:brightness-95 group-hover:mix-blend-normal group-hover:filter-none opacity-85 md:opacity-100 z-[4]"
+          src={image}
+          alt={`${title} preview`}
+        />
+      ) : (
+        <div className="w-full min-h-[400px] h-full rounded-lg flex items-center justify-center bg-gradient-to-br from-[#0a3a6b] to-themeBlue/40 mix-blend-multiply group-hover:mix-blend-normal transition-all duration-500">
+          <span className="font-fontHeading font-bold text-6xl text-primaryText/90 z-[4]">
+            {title.charAt(0)}
+          </span>
+        </div>
+      )}
+    </div>
+  </div>
+);
 
 export default MainProjectCard;

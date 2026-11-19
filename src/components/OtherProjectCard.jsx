@@ -5,6 +5,10 @@ import { motion } from "framer-motion";
 const OtherProjectCard = ({
   project: { title, description, tags, github, demo },
 }) => {
+  const hasDemo = Boolean(demo);
+  const hasGithub = Boolean(github);
+  const primaryLink = demo || github || undefined;
+
   return (
     <motion.li
       initial={{ opacity: 0 }}
@@ -20,30 +24,40 @@ const OtherProjectCard = ({
               <CiFolderOn />
             </div>
             <div className="flex items-center -mr-[10px] ">
-              <a
-                href={github}
-                className="flex justify-center items-center px-[7px] py-[5px] relative z-[1] text-2xl text-secondaryText transition-all duration-200  hover:text-themeBlue"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FiGithub />
-              </a>
-              <a
-                href={demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex justify-center items-center px-[7px] py-[5px] relative z-[1] text-2xl text-secondaryText transition-all duration-200  hover:text-themeBlue"
-              >
-                <FiExternalLink />
-              </a>
+              {hasGithub && (
+                <a
+                  href={github}
+                  className="flex justify-center items-center px-[7px] py-[5px] relative z-[1] text-2xl text-secondaryText transition-all duration-200  hover:text-themeBlue"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${title} GitHub`}
+                >
+                  <FiGithub />
+                </a>
+              )}
+              {hasDemo && (
+                <a
+                  href={demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex justify-center items-center px-[7px] py-[5px] relative z-[1] text-2xl text-secondaryText transition-all duration-200  hover:text-themeBlue"
+                  aria-label={`${title} live site`}
+                >
+                  <FiExternalLink />
+                </a>
+              )}
             </div>
           </div>
 
           <h3 className="mb-[10px] text-primaryText transition-all duration-500  group-hover:text-themeBlue text-xl font-bold leading-[1.1] font-fontHeading">
-            <a href={demo} target="_blank" rel="noopener noreferrer">
-              <div className="block absolute z-0 w-full h-full top-0 left-0"></div>
-              {title}
-            </a>
+            {primaryLink ? (
+              <a href={primaryLink} target="_blank" rel="noopener noreferrer">
+                <div className="block absolute z-0 w-full h-full top-0 left-0"></div>
+                {title}
+              </a>
+            ) : (
+              title
+            )}
           </h3>
           <div className="text-secondaryText text-[14px] font-semibold font-fontParagraph">
             <p>{description}</p>

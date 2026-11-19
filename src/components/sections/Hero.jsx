@@ -35,8 +35,25 @@ const Hero = () => {
             viewport={{ once: true }}
             className="text-center lg:text-left text-clamp2 text-secondaryText font-bold font-fontHeading"
           >
-            Front-End React Developer
+            Full Stack Developer
           </motion.h3>
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            transition={{ delay: 0.45, duration: 0.5 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center lg:text-left m-0 mt-[8px] text-themeBlue font-mono text-sm tracking-wide"
+          >
+            Founder of{" "}
+            <a
+              href="https://github.com/mxbilal/bytebridges"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 hover:text-primaryText transition-colors"
+            >
+              ByteBridges
+            </a>
+          </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             transition={{ delay: 0.5, duration: 0.5 }}
@@ -44,8 +61,8 @@ const Hero = () => {
             viewport={{ once: true }}
             className="text-center lg:text-left m-0 mt-[20px] text-secondaryText font-fontParagraph"
           >
-            I'm a passionate front-end developer specialized in building exceptional web apps from
-            Islamabad, Pakistan 📍
+            I build end-to-end web products — React/Next frontends, NestJS/Node
+            APIs, and cloud deploys — from Islamabad, Pakistan.
           </motion.p>
           <ButtonLink
             content="Get In Touch!"

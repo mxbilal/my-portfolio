@@ -1,14 +1,9 @@
 import MainProjectCard from "../MainProjectCard";
-import { useState } from "react";
 import OtherProjectCard from "../OtherProjectCard";
 import { mainProjects, otherProjects } from "../../utilities/constants";
 import { motion } from "framer-motion";
 
 const Projects = () => {
-  const [showMore, setShowMore] = useState(false);
-  const limitedProjects = otherProjects.slice(0, 6);
-  const projectsToShow = showMore ? otherProjects : limitedProjects;
-
   return (
     <>
       <motion.section
@@ -21,7 +16,7 @@ const Projects = () => {
       >
         <div className="flex items-center justify-start relative mt-[10px] mb-[40px] mx-0 w-full whitespace-nowrap text-sectionHeading text-primaryText font-bold">
           <span className="relative -bottom-1 text-themeBlue font-mono text-smallSize font-semibold mr-[10px]">
-            03.
+            04.
           </span>
           <h2 className="text-sectionHeading">Some Things I've Built</h2>
           <div className="block sm:hidden w-full h-[1px] bg-blue-400/20 relative top-[5px] ml-[10px] "></div>
@@ -53,19 +48,11 @@ const Projects = () => {
         </h2>
 
         <ul className="list-none p-0 mt-[50px] grid grid-cols-otherProjectsSmaller lg:grid-cols-otherProjects gap-[15px] relative">
-          {projectsToShow &&
-            projectsToShow.map((project, idx) => (
+          {otherProjects &&
+            otherProjects.map((project, idx) => (
               <OtherProjectCard project={project} key={idx} />
             ))}
         </ul>
-
-        {/* <button
-          type="button"
-          className="font-mono leading-4 text-themeBlue bg-transparent border border-themeBlue rounded-[4px] px-7 py-5 mx-auto mt-[80px] text-[14px] transition-all ease-in-out duration-300 hover:shadow-buttonShadow hover:-translate-x-1 hover:-translate-y-1"
-          onClick={() => setShowMore(!showMore)}
-        >
-          Show {showMore ? "Less" : "More"}
-        </button> */}
       </motion.section>
     </>
   );

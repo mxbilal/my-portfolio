@@ -13,7 +13,7 @@ const Contact = () => {
     >
       <h2 className="mx-0 mt-[10px] mb-[20px] w-full leading-[1.1] block text-themeBlue font-mono text-lg tracking-wider">
         <span className="text-base relative bottom-0 -mb-[3px] mr-[5px] sm:mr-[10px] sm:mb-0">
-          04.
+          05.
         </span>
         Whats's Next?
       </h2>
@@ -21,9 +21,8 @@ const Contact = () => {
         Get In Touch
       </h2>
       <p className="font-sans text-secondaryText text-lg leading-[1.5] tracking-wide">
-        I am actively seeking new career opportunities, and my inbox is always
-        open. Whether you have a job opportunity or if you just want to connect,
-        feel free to reach out.
+        I'm open to full stack roles and product collaborations. Whether you
+        have a role, a project, or just want to connect — my inbox is open.
         <br />
         Type <code className="bg-slate-800 px-1 rounded">npx mxbilal0</code> in
         your terminal with node installed.

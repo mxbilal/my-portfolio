@@ -1,5 +1,5 @@
 import about from "../../assets/pic2.jpg";
-import { skills } from "../../utilities/constants";
+import { education, skills } from "../../utilities/constants";
 import { motion } from "framer-motion";
 
 const About = () => {
@@ -36,24 +36,35 @@ const About = () => {
         </div>
         <div className="text-secondaryText font-fontParagraph text-base md:text-justify w-full md:max-w-[350px] lg:max-w-[500px]">
           <p className="mb-3">
-            A front-end developer with expertise in <span className="text-themeBlue">HTML</span>,{" "}
-            <span className="text-themeBlue">CSS</span>,{" "}
-            <span className="text-themeBlue">SCSS</span>,{" "}
-            <span className="text-themeBlue">JavaScript</span>,{" "}
+            A full stack developer and founder of{" "}
+            <a
+              href="https://github.com/mxbilal/bytebridges"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-themeBlue hover:underline underline-offset-2"
+            >
+              ByteBridges
+            </a>{" "}
+            — a small Islamabad team shipping CRMs, CMS tools, and SaaS for
+            startups. Comfortable across{" "}
             <span className="text-themeBlue">React</span>,{" "}
-            <span className="text-themeBlue">Next</span> and{" "}
-            <span className="text-themeBlue">Tailwind</span>. Experience working on a range of
-            projects, from simple web pages to complex web applications, and have a track record of
-            delivering quality work on time and within budget.
+            <span className="text-themeBlue">Next.js</span>,{" "}
+            <span className="text-themeBlue">NestJS</span>,{" "}
+            <span className="text-themeBlue">Node</span>,{" "}
+            <span className="text-themeBlue">MongoDB</span>, and{" "}
+            <span className="text-themeBlue">TypeScript</span> — from UI to API
+            to deploy.
           </p>
           <p className="mb-3">
-            Currently responsible for development and maintenance of multiple applications, working
-            closely with designers and other developers for seamless user experiences.
+            Currently shipping production apps at Irtiqa Business Solutions:
+            REST APIs, SSO, micro-frontends, and cloud deployments on AWS and
+            Vercel. Previously built booking systems, admin platforms, and
+            client-facing products at Selteq and Xint.
           </p>
           <p className="mb-3">
-            Skilled in problem-solving, a quick learner and motivated to improve skills. Believes in
-            writing clean and maintainable code and familiar with industry best practices and
-            standards.
+            {education.degree} from {education.school} ({education.period}). I
+            care about clean, maintainable code and working closely with
+            designers and other engineers.
           </p>
           <p className="mb-4">Here are a few technologies I’ve been working with recently:</p>
           <ul className="grid grid-cols-custom gap-x-3 overflow-hidden list-none">
