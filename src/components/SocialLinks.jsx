@@ -5,7 +5,7 @@ const SocialLinks = () => {
   return (
     <>
       <motion.div
-        className="w-[40px] hidden fixed bottom-0 md:block left-[20px] right-auto lg:left-[40px] z-10 text-primaryText "
+        className="w-[40px] hidden fixed bottom-0 md:block left-[20px] right-auto lg:left-[40px] z-40 text-primaryText"
         initial={{ opacity: 0 }}
         transition={{ delay: 0.5, duration: 0.5 }}
         whileInView={{ opacity: 1 }}
@@ -16,14 +16,16 @@ const SocialLinks = () => {
             social_links.map(({ url, icon, name }, idx) => (
               <li
                 key={idx}
-                className="p-[10px] transition hover:-translate-y-[3px] duration-300 text-secondaryText hover:text-themeBlue"
+                className="p-[10px] text-secondaryText"
+                style={{ animationDelay: `${idx * 0.45}s` }}
               >
                 <a
                   href={url}
                   target="_blank"
                   aria-label={name}
                   rel="noopener noreferrer"
-                  className=""
+                  className="inline-flex animate-socialFocus transition-colors duration-300 hover:!text-themeBlue hover:scale-110"
+                  style={{ animationDelay: `${idx * 0.45}s` }}
                 >
                   {icon}
                 </a>
@@ -34,7 +36,7 @@ const SocialLinks = () => {
       </motion.div>
 
       <motion.div
-        className="w-[40px] hidden fixed bottom-0 md:block left-auto right-[20px] lg:right-[40px] z-10 text-primaryText "
+        className="w-[40px] hidden fixed bottom-0 md:block left-auto right-[20px] lg:right-[40px] z-40 text-primaryText"
         initial={{ opacity: 0 }}
         transition={{ delay: 0.5, duration: 0.5 }}
         whileInView={{ opacity: 1 }}

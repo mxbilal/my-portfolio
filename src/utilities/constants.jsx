@@ -1,7 +1,9 @@
 import { LuLinkedin, LuGithub } from "react-icons/lu";
+import { SiCodewars } from "react-icons/si";
 import lyca from "../assets/engagement.png";
 import plexaar from "../assets/plex.jpg";
 import traderos from "../assets/traderos.png";
+import eventooz from "../assets/eventooz.png";
 
 export const navLinks = [
   {
@@ -49,7 +51,15 @@ export const social_links = [
     icon: <LuLinkedin className="w-[22px] h-[22px]" />,
     name: "Linkedin",
   },
+  {
+    url: "https://www.codewars.com/users/bilalCode/",
+    icon: <SiCodewars className="w-[22px] h-[22px]" />,
+    name: "CodeWar",
+  },
 ];
+
+/** Uncomment when ready to link the live site */
+// export const bytebridgesUrl = "https://bytebridges.vercel.app";
 
 export const experience = [
   {
@@ -119,7 +129,7 @@ export const mainProjects = [
     ],
     github: "",
     demo: "https://eventooz.com",
-    image: null,
+    image: eventooz,
   },
   {
     title: "Plexaar CRM & Expert Services",

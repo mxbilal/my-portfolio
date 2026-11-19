@@ -49,14 +49,18 @@ const OtherProjectCard = ({
             </div>
           </div>
 
-          <h3 className="mb-[10px] text-primaryText transition-all duration-500  group-hover:text-themeBlue text-xl font-bold leading-[1.1] font-fontHeading">
+          <h3 className="mb-[10px] text-xl font-bold leading-[1.1] font-fontHeading">
             {primaryLink ? (
               <a href={primaryLink} target="_blank" rel="noopener noreferrer">
                 <div className="block absolute z-0 w-full h-full top-0 left-0"></div>
-                {title}
+                <span className="inline-block bg-accentOrange text-accentInk px-[0.28em] py-[0.05em] rounded-[3px] transition-all duration-200 group-hover:brightness-110">
+                  {title}
+                </span>
               </a>
             ) : (
-              title
+              <span className="inline-block bg-accentOrange text-accentInk px-[0.28em] py-[0.05em] rounded-[3px]">
+                {title}
+              </span>
             )}
           </h3>
           <div className="text-secondaryText text-[14px] font-semibold font-fontParagraph">

@@ -26,7 +26,10 @@ const Hero = () => {
             viewport={{ once: true }}
             className="text-clamp2 m-0 font-bold text-primaryText font-fontHeading"
           >
-            Muhammad Bilal.
+            Muhammad{" "}
+            <span className="inline-block bg-accentOrange text-accentInk px-[0.18em] rounded-[3px]">
+              Bilal.
+            </span>
           </motion.h2>
           <motion.h3
             initial={{ opacity: 0, y: 15 }}
@@ -45,14 +48,17 @@ const Hero = () => {
             className="text-center lg:text-left m-0 mt-[8px] text-themeBlue font-mono text-sm tracking-wide"
           >
             Founder of{" "}
+            {/* Live site ready — uncomment when you want it linked:
             <a
-              href="https://github.com/mxbilal/bytebridges"
+              href="https://bytebridges.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
               className="underline underline-offset-4 hover:text-primaryText transition-colors"
             >
               ByteBridges
             </a>
+            */}
+            <span className="underline underline-offset-4">ByteBridges</span>
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 15 }}

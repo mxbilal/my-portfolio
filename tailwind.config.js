@@ -13,6 +13,8 @@ module.exports = {
         primaryText: "#CCD6F6",
         secondaryText: "#8892B0",
         themeBlue: "#4CC2DF",
+        accentOrange: "#F59E0B",
+        accentInk: "#0A192F",
       },
       fontFamily: {
         fontHeading: "Poppins, sans-serif",
@@ -40,6 +42,7 @@ module.exports = {
       animation: {
         custom: "scale .2s linear 2.5s",
         morph: "morph 4s ease-in-out infinite both alternate",
+        socialFocus: "socialFocus 2.8s ease-in-out infinite",
       },
       keyframes: {
         scale: {
@@ -52,6 +55,18 @@ module.exports = {
           },
           "100%": {
             borderRadius: "40% 60%",
+          },
+        },
+        socialFocus: {
+          "0%, 100%": {
+            color: "#8892B0",
+            transform: "translateY(0) scale(1)",
+            filter: "drop-shadow(0 0 0 transparent)",
+          },
+          "50%": {
+            color: "#4CC2DF",
+            transform: "translateY(-2px) scale(1.08)",
+            filter: "drop-shadow(0 0 6px rgba(76, 194, 223, 0.55))",
           },
         },
       },
